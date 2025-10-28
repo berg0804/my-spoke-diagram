@@ -9,21 +9,23 @@
   body {
     margin: 0;
     padding: 0;
-    background: #f7f7f7;
     font-family: Arial, sans-serif;
+    background: #f7f7f7;
   }
 
   #controls {
     background: #ffffff;
     padding: 12px;
     text-align: center;
+    position: relative;
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 10;
   }
 
   #dropdown {
     font-size: 16px;
     padding: 6px 10px;
+    cursor: pointer;
   }
 
   #cy {
@@ -49,7 +51,7 @@
   let graphData = {};
   let colorData = {};
 
-  // Load both JSON files
+  // Load both JSONs
   Promise.all([
     fetch('player_graph.json').then(res => res.json()),
     fetch('node_colors.json').then(res => res.json())
@@ -97,7 +99,7 @@
       layout: { name: 'cose' }
     });
 
-    // Dropdown selection event
+    // When a player is selected from dropdown
     dropdown.addEventListener('change', () => {
       const selectedPlayer = dropdown.value;
       cy.elements().remove();
