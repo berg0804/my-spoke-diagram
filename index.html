@@ -58,8 +58,9 @@
       graphData = data;
       const dropdown = document.getElementById('dropdown');
 
-      // Populate dropdown with all target players (keys)
-      Object.keys(graphData).forEach(player => {
+      // Populate dropdown in alphabetical order
+      const players = Object.keys(graphData).sort((a, b) => a.localeCompare(b));
+      players.forEach(player => {
         const option = document.createElement('option');
         option.value = player;
         option.textContent = player;
