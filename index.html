@@ -110,9 +110,10 @@
       cy.add({
         data: { id: selectedPlayer },
         style: {
-           'background-color': colorData[selectedPlayer] || '#0074D9' },
-           'width': 40,
-           'height': 40
+           'background-color': colorData[selectedPlayer] || '#0074D9' ,
+           'width': 50,
+           'height': 50
+        }
       });
 
       // Add first-degree neighbors
@@ -121,9 +122,10 @@
         cy.add({
           data: { id: target },
           style: { 
-            'background-color': colorData[target] || '#6fa8dc' },
+            'background-color': colorData[target] || '#6fa8dc' ,
             'width': 25,
             'height': 25
+          }
         });
         cy.add({ data: { source: selectedPlayer, target } });
       });
