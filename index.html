@@ -14,11 +14,9 @@
   <div id="cy"></div>
 
   <script>
-    // Load JSON dynamically
     fetch('player_graph.json')
       .then(response => response.json())
       .then(graph => {
-        // Convert your JSON into Cytoscape elements
         const elements = [];
         Object.keys(graph).forEach(source => {
           elements.push({ data: { id: source, label: source } });
@@ -32,53 +30,26 @@
           container: document.getElementById('cy'),
           elements: elements,
           style: [
-            {
-              selector: 'node',
-              style: {
-                'background-color': '#6fa8dc',
-                'label': 'data(label)',
-                'color': 'white',
-                'font-size': 12,
-                'text-valign': 'center'
-              }
-            },
-            {
-              selector: 'edge',
-              style: {
-                'width': 2,
-                'line-color': '#ccc',
-                'target-arrow-color': '#ccc',
-                'target-arrow-shape': 'triangle'
-              }
-            }
+            { selector: 'node', style: { 'background-color': '#6fa8dc', 'label': 'data(label)', 'color': 'white', 'font-size': 12 } },
+            { selector: 'edge', style: { 'width': 2, 'line-color': '#ccc', 'target-arrow-shape': 'triangle', 'target-arrow-color': '#ccc' } }
           ],
-          layout: {
-            name: 'cose',
-            animate: true
-          }
+          layout: { name: 'cose', animate: true }
         });
 
-        // Click node to expand
         cy.on('tap', 'node', evt => {
           const node = evt.target;
           const nodeId = node.id();
-
           const neighbors = graph[nodeId];
           if (neighbors && neighbors.length > 0) {
             neighbors.forEach(target => {
-              // Only add if it doesn’t exist
               if (cy.getElementById(target).empty()) {
-                cy.add([
-                  { data: { id: target, label: target } },
-                  { data: { source: nodeId, target: target } }
-                ]);
+                cy.add([{ data: { id: target, label: target } }, { data: { source: nodeId, target: target } }]);
               }
             });
             cy.layout({ name: 'cose', animate: true }).run();
           }
         });
-      })
-      .catch(err => console.error('Error loading JSON:', err));
+      });
   </script>
 </body>
 </html>
