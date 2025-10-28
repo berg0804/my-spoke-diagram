@@ -109,7 +109,10 @@
       // Add selected player node
       cy.add({
         data: { id: selectedPlayer },
-        style: { 'background-color': colorData[selectedPlayer] || '#0074D9' }
+        style: {
+           'background-color': colorData[selectedPlayer] || '#0074D9' },
+           'width': 40,
+           'height': 40
       });
 
       // Add first-degree neighbors
