@@ -48,7 +48,7 @@
   let cy;
   let graphData = {};
 
-  // Load the JSON file
+  // Load JSON file
   fetch('player_graph.json')
     .then(response => {
       if (!response.ok) throw new Error('Network response was not ok');
@@ -67,7 +67,7 @@
         dropdown.appendChild(option);
       });
 
-      // Initialize Cytoscape container (empty)
+      // Initialize empty Cytoscape
       cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [],
@@ -92,28 +92,50 @@
             }
           }
         ],
-        layout: { name: 'circle' }
+        layout: { name: 'cose' }
       });
 
-      // When a player is selected from dropdown
+      // When a player is selected
       dropdown.addEventListener('change', () => {
         const selectedPlayer = dropdown.value;
-        cy.elements().remove(); // Clear old graph
-
-        if (selectedPlayer && graphData[selectedPlayer]) {
-          const nodes = [{ data: { id: selectedPlayer } }];
-          const edges = [];
-
-          graphData[selectedPlayer].forEach(target => {
-            nodes.push({ data: { id: target } });
-            edges.push({ data: { source: selectedPlayer, target } });
-          });
-
-          cy.add(nodes);
-          cy.add(edges);
-          cy.layout({ name: 'circle' }).run();
+        if (!selectedPlayer) {
+          cy.elements().remove();
+          return;
         }
+
+        // Clear existing graph
+        cy.elements().remove();
+
+        // Add selected player node
+        cy.add({ data: { id: selectedPlayer } });
+
+        // Add first-degree neighbors
+        const neighbors = graphData[selectedPlayer] || [];
+        neighbors.forEach(target => {
+          cy.add({ data: { id: target } });
+          cy.add({ data: { source: selectedPlayer, target } });
+        });
+
+        cy.layout({ name: 'cose', animate: true }).run();
       });
+
+      // Click to expand nodes
+      cy.on('tap', 'node', evt => {
+        const nodeId = evt.target.id();
+        const neighbors = graphData[nodeId] || [];
+
+        neighbors.forEach(target => {
+          if (cy.getElementById(target).empty()) {
+            cy.add([
+              { data: { id: target } },
+              { data: { source: nodeId, target } }
+            ]);
+          }
+        });
+
+        cy.layout({ name: 'cose', animate: true }).run();
+      });
+
     })
     .catch(error => console.error('Error loading JSON:', error));
 </script>
