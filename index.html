@@ -24,7 +24,7 @@
       height: 88vh;
       border-top: 1px solid #333;
     }
-    select, input {
+    select, input, button {
       padding: 6px;
       font-size: 16px;
       border-radius: 4px;
@@ -43,15 +43,15 @@
 
   <script>
     let graphData = {};
-    let cy;
+    let cy = null;
 
-    // Load JSON from GitHub Pages
+    // Load JSON
     fetch('player_graph.json')
       .then(response => response.json())
       .then(graph => {
         graphData = graph;
 
-        // Build a list of all nodes (both keys and targets)
+        // Build all unique node names (sources + targets)
         const allNodes = new Set();
         Object.keys(graph).forEach(src => {
           allNodes.add(src);
@@ -61,6 +61,8 @@
         const allNodesArray = Array.from(allNodes).sort();
         const results = document.getElementById('results');
         results.innerHTML = '<option value="">Select a player</option>';
+
+        // Populate dropdown initially
         allNodesArray.forEach(n => {
           const opt = document.createElement('option');
           opt.value = n;
@@ -68,7 +70,7 @@
           results.appendChild(opt);
         });
 
-        // Filter dropdown based on search box input
+        // Search filtering
         const searchBox = document.getElementById('searchBox');
         searchBox.addEventListener('input', () => {
           const query = searchBox.value.toLowerCase();
@@ -85,7 +87,7 @@
       })
       .catch(err => console.error('Error loading JSON:', err));
 
-    // Button click builds the diagram
+    // --- Create diagram only when a player is selected ---
     document.getElementById('showBtn').addEventListener('click', () => {
       const selected = document.getElementById('results').value;
       if (!selected) {
@@ -93,7 +95,10 @@
         return;
       }
 
-      // Build elements from selected node
+      // Remove any existing graph
+      if (cy) cy.destroy();
+
+      // Get one-degree connections
       const elements = [];
       elements.push({ data: { id: selected, label: selected } });
 
@@ -103,8 +108,7 @@
         elements.push({ data: { source: selected, target: target } });
       });
 
-      // Create Cytoscape instance (or clear if it exists)
-      if (cy) cy.destroy();
+      // Initialize Cytoscape (now blank until first click)
       cy = cytoscape({
         container: document.getElementById('cy'),
         elements: elements,
@@ -132,10 +136,11 @@
         layout: { name: 'cose', animate: true }
       });
 
-      // Click node to expand its connections dynamically
+      // Click any node to expand it
       cy.on('tap', 'node', evt => {
         const nodeId = evt.target.id();
         const newNeighbors = graphData[nodeId] || [];
+
         newNeighbors.forEach(target => {
           if (cy.getElementById(target).empty()) {
             cy.add([
@@ -144,6 +149,7 @@
             ]);
           }
         });
+
         cy.layout({ name: 'cose', animate: true }).run();
       });
     });
