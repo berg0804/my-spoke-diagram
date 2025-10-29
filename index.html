@@ -18,7 +18,6 @@
     background: #222;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   select {
@@ -27,48 +26,34 @@
     border: none;
     padding: 6px;
     border-radius: 4px;
-    width: 200px;
+    width: 250px;
   }
   #cy {
     flex-grow: 1;
     width: 100%;
     height: 100%;
   }
-  button {
-    background: #444;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
 </style>
 </head>
 <body>
   <div id="controls">
-    <div>
-      From: <select id="startNode"></select>
-      To: <select id="endNode"></select>
-      <button id="findPath">Find Shortest Path</button>
-    </div>
+    <label for="nodeSelect">Select a player:</label>
+    <select id="nodeSelect"></select>
   </div>
 
   <div id="cy"></div>
 
 <script>
-// Load both graph and colors JSONs
 Promise.all([
   fetch('player_graph.json').then(r => r.json()),
   fetch('colors.json').then(r => r.json())
 ]).then(([graph, colors]) => {
 
-  // --- Step 1: Sanitize node names (replace spaces with underscores for internal IDs) ---
   const sanitize = name => name.replace(/\s+/g, '_');
-
   const elements = [];
   const nodeSet = new Set();
 
-  // --- Step 2: Build Cytoscape elements from JSON ---
+  // Build Cytoscape elements
   for (const source in graph) {
     const sourceId = sanitize(source);
     nodeSet.add(sourceId);
@@ -76,6 +61,7 @@ Promise.all([
       data: { id: sourceId, label: source },
       style: { 'background-color': colors[source] || '#6fa8dc' }
     });
+
     for (const target of graph[source]) {
       const targetId = sanitize(target);
       if (!nodeSet.has(targetId)) {
@@ -89,7 +75,7 @@ Promise.all([
     }
   }
 
-  // --- Step 3: Initialize Cytoscape ---
+  // Initialize Cytoscape
   const cy = cytoscape({
     container: document.getElementById('cy'),
     elements,
@@ -112,54 +98,66 @@ Promise.all([
     ]
   });
 
-  // --- Step 4: Dropdowns ---
+  // Populate dropdown
   const allNodes = Array.from(nodeSet).sort();
-  const startDropdown = document.getElementById('startNode');
-  const endDropdown = document.getElementById('endNode');
-
+  const dropdown = document.getElementById('nodeSelect');
   allNodes.forEach(id => {
     const label = cy.$id(id).data('label');
-    const opt1 = document.createElement('option');
-    const opt2 = document.createElement('option');
-    opt1.value = opt2.value = id;
-    opt1.textContent = opt2.textContent = label;
-    startDropdown.appendChild(opt1);
-    endDropdown.appendChild(opt2);
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = label;
+    dropdown.appendChild(opt);
   });
 
-  // --- Step 5: Highlight selected node from dropdown ---
-  startDropdown.addEventListener('change', () => {
-    cy.elements().removeClass('selectedNode');
+  // Update when dropdown changes
+  dropdown.addEventListener('change', () => {
+    cy.elements().removeClass('faded');
+    const selected = cy.$id(dropdown.value);
+
     cy.nodes().forEach(n => {
       n.style('width', 20);
       n.style('height', 20);
     });
-    const selected = cy.$id(startDropdown.value);
     selected.style('width', 40);
     selected.style('height', 40);
+
+    const neighborhood = selected.closedNeighborhood();
+    cy.elements().addClass('faded');
+    neighborhood.removeClass('faded');
+    cy.animate({
+      fit: { eles: neighborhood, padding: 80 },
+      duration: 500
+    });
   });
 
-  // --- Step 6: Shortest path ---
-  document.getElementById('findPath').addEventListener('click', () => {
-    const start = cy.$id(startDropdown.value);
-    const end = cy.$id(endDropdown.value);
-    if (!start.nonempty() || !end.nonempty()) return;
+  // Expand on click
+  cy.on('tap', 'node', evt => {
+    const node = evt.target;
+    const nodeId = node.id();
+    const label = node.data('label');
 
-    const dijkstra = cy.elements().dijkstra({ root: start, directed: true });
-    const path = dijkstra.pathTo(end);
-
-    cy.elements().removeClass('highlighted');
-    cy.elements().style('line-color', '#888');
-    cy.elements().style('background-color', ele => colors[ele.data('label')] || '#6fa8dc');
-    path.addClass('highlighted');
+    if (graph[label]) {
+      const existingTargets = new Set(cy.edges().map(e => e.data('target')));
+      for (const target of graph[label]) {
+        const targetId = sanitize(target);
+        if (!cy.$id(targetId).nonempty()) {
+          cy.add({
+            data: {
+              id: targetId,
+              label: target
+            },
+            style: {
+              'background-color': colors[target] || '#6fa8dc'
+            }
+          });
+        }
+        if (!existingTargets.has(targetId)) {
+          cy.add({ data: { source: nodeId, target: targetId } });
+        }
+      }
+      cy.layout({ name: 'cose', animate: true }).run();
+    }
   });
-
-  cy.style().selector('.highlighted').style({
-    'background-color': '#ff9800',
-    'line-color': '#ff9800',
-    'width': 5,
-    'height': 5
-  }).update();
 });
 </script>
 </body>
