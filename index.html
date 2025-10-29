@@ -1,164 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Spoke Diagram</title>
-<script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
-<style>
-  body {
-    background-color: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  #controls {
-    background: #222;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-  }
-  select {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 6px;
-    border-radius: 4px;
-    width: 250px;
-  }
-  #cy {
-    flex-grow: 1;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Spoke Diagram</title>
+  <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+    #controls {
+      background: #ffffff;
+      padding: 12px;
+      text-align: center;
+      position: relative;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    select, button {
+      margin: 0 8px;
+      font-size: 16px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    #cy {
+      width: 100vw;
+      height: calc(100vh - 60px);
+      display: block;
+      background: #111;
+    }
+  </style>
 </head>
 <body>
   <div id="controls">
-    <label for="nodeSelect">Select a player:</label>
-    <select id="nodeSelect"></select>
+    <select id="dropdown">
+      <option value="">Select a player...</option>
+    </select>
+    <select id="targetDropdown">
+      <option value="">Select target player...</option>
+    </select>
+    <button id="pathBtn">Show Shortest Path</button>
+    <button id="clearBtn">Clear Path</button>
   </div>
-
   <div id="cy"></div>
 
-<script>
-Promise.all([
-  fetch('player_graph.json').then(r => r.json()),
-  fetch('node_colors.json').then(r => r.json())
-]).then(([graph, colors]) => {
+  <script>
+    let graphData = {};
+    let colorData = {};
+    let cy;
 
-  const sanitize = name => name.replace(/\s+/g, '_');
-  const elements = [];
-  const nodeSet = new Set();
+    // Load both JSONs
+    Promise.all([
+      fetch('player_graph.json').then(res => res.json()),
+      fetch('node_colors.json').then(res => res.json())
+    ])
+    .then(([graph, colors]) => {
+      graphData = graph;
+      colorData = colors;
 
-  // Build Cytoscape elements
-  for (const source in graph) {
-    const sourceId = sanitize(source);
-    nodeSet.add(sourceId);
-    elements.push({
-      data: { id: sourceId, label: source },
-      style: { 'background-color': colors[source] || '#6fa8dc' }
-    });
-
-    for (const target of graph[source]) {
-      const targetId = sanitize(target);
-      if (!nodeSet.has(targetId)) {
-        elements.push({
-          data: { id: targetId, label: target },
-          style: { 'background-color': colors[target] || '#6fa8dc' }
-        });
-        nodeSet.add(targetId);
-      }
-      elements.push({ data: { source: sourceId, target: targetId } });
-    }
-  }
-
-  // Initialize Cytoscape
-  const cy = cytoscape({
-    container: document.getElementById('cy'),
-    elements,
-    layout: { name: 'cose', animate: true },
-    style: [
-      {
-        selector: 'node',
-        style: {
-          'label': 'data(label)',
-          'color': 'white',
-          'text-valign': 'center',
-          'text-outline-color': '#222',
-          'text-outline-width': 2,
-          'font-size': 12,
-          'width': 20,
-          'height': 20
-        }
-      },
-      { selector: 'edge', style: { 'width': 2, 'line-color': '#888' } }
-    ]
-  });
-
-  // Populate dropdown
-  const allNodes = Array.from(nodeSet).sort();
-  const dropdown = document.getElementById('nodeSelect');
-  allNodes.forEach(id => {
-    const label = cy.$id(id).data('label');
-    const opt = document.createElement('option');
-    opt.value = id;
-    opt.textContent = label;
-    dropdown.appendChild(opt);
-  });
-
-  // Update when dropdown changes
-  dropdown.addEventListener('change', () => {
-    cy.elements().removeClass('faded');
-    const selected = cy.$id(dropdown.value);
-
-    cy.nodes().forEach(n => {
-      n.style('width', 20);
-      n.style('height', 20);
-    });
-    selected.style('width', 40);
-    selected.style('height', 40);
-
-    const neighborhood = selected.closedNeighborhood();
-    cy.elements().addClass('faded');
-    neighborhood.removeClass('faded');
-    cy.animate({
-      fit: { eles: neighborhood, padding: 80 },
-      duration: 500
-    });
-  });
-
-  // Expand on click
-  cy.on('tap', 'node', evt => {
-    const node = evt.target;
-    const nodeId = node.id();
-    const label = node.data('label');
-
-    if (graph[label]) {
-      const existingTargets = new Set(cy.edges().map(e => e.data('target')));
-      for (const target of graph[label]) {
-        const targetId = sanitize(target);
-        if (!cy.$id(targetId).nonempty()) {
-          cy.add({
-            data: {
-              id: targetId,
-              label: target
-            },
+      cy = cytoscape({
+        container: document.getElementById('cy'),
+        style: [
+          {
+            selector: 'node',
             style: {
-              'background-color': colors[target] || '#6fa8dc'
+              'background-color': '#6fa8dc',
+              'label': 'data(id)',
+              'color': '#fff',
+              'text-valign': 'center',
+              'text-outline-width': 1,
+              'text-outline-color': '#222',
+              'font-size': '10px'
+            }
+          },
+          {
+            selector: 'edge',
+            style: {
+              'width': 2,
+              'line-color': '#888',
+              'target-arrow-color': '#888',
+              'target-arrow-shape': 'triangle'
+            }
+          }
+        ],
+        layout: { name: 'cose', animate: true }
+      });
+
+      const dropdown = document.getElementById('dropdown');
+      const targetDropdown = document.getElementById('targetDropdown');
+      const pathBtn = document.getElementById('pathBtn');
+      const clearBtn = document.getElementById('clearBtn');
+
+      // Populate dropdowns alphabetically
+      const players = Object.keys(graphData).sort((a,b) => a.localeCompare(b));
+      players.forEach(player => {
+        const opt1 = document.createElement('option');
+        opt1.value = player;
+        opt1.textContent = player;
+        dropdown.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = player;
+        opt2.textContent = player;
+        targetDropdown.appendChild(opt2);
+      });
+
+      // On selecting a player
+      dropdown.addEventListener('change', () => {
+        const selectedPlayer = dropdown.value;
+        if (!selectedPlayer) return;
+
+        cy.elements().remove();
+        const neighbors = graphData[selectedPlayer] || [];
+
+        // Add selected player (larger)
+        cy.add({
+          data: { id: selectedPlayer },
+          style: { 
+            'background-color': colorData[selectedPlayer] || '#0074D9',
+            'width': 40,
+            'height': 40
+          }
+        });
+
+        // Add neighbors
+        neighbors.forEach(target => {
+          cy.add({
+            data: { id: target },
+            style: { 
+              'background-color': colorData[target] || '#6fa8dc',
+              'width': 25,
+              'height': 25
             }
           });
+          cy.add({ data: { source: selectedPlayer, target } });
+        });
+
+        cy.layout({ name: 'cose', animate: true }).run();
+      });
+
+      // Click node to expand
+      cy.on('tap', 'node', evt => {
+        const nodeId = evt.target.id();
+        const neighbors = graphData[nodeId] || [];
+
+        neighbors.forEach(target => {
+          if (cy.getElementById(target).empty()) {
+            cy.add([
+              {
+                data: { id: target },
+                style: { 
+                  'background-color': colorData[target] || '#6fa8dc',
+                  'width': 25,
+                  'height': 25
+                }
+              },
+              { data: { source: nodeId, target } }
+            ]);
+          }
+        });
+
+        cy.layout({ name: 'cose', animate: true }).run();
+      });
+
+      // Shortest path button
+      pathBtn.addEventListener('click', () => {
+        const start = dropdown.value;
+        const end = targetDropdown.value;
+        if (!start || !end) {
+          alert("Please select both start and target players.");
+          return;
         }
-        if (!existingTargets.has(targetId)) {
-          cy.add({ data: { source: nodeId, target: targetId } });
+
+        // Compute Dijkstra shortest path
+        const dijkstra = cy.elements().dijkstra(`#${CSS.escape(start)}`);
+        const path = dijkstra.pathTo(cy.$(`#${CSS.escape(end)}`));
+
+        if (!path || path.length === 0) {
+          alert("No path found.");
+          return;
         }
-      }
-      cy.layout({ name: 'cose', animate: true }).run();
-    }
-  });
-});
-</script>
+
+        // Reset styles
+        cy.nodes().forEach(n => n.style('border-width', 0));
+        cy.edges().forEach(e => e.style('line-color', '#888'));
+
+        // Highlight path
+        path.nodes().forEach(n => n.style({
+          'border-width': 4,
+          'border-color': 'yellow'
+        }));
+        path.edges().forEach(e => e.style('line-color', 'yellow'));
+
+        cy.fit(path, 100);
+      });
+
+      // Clear button
+      clearBtn.addEventListener('click', () => {
+        cy.nodes().forEach(n => n.style('border-width', 0));
+        cy.edges().forEach(e => e.style('line-color', '#888'));
+        cy.fit(cy.elements(), 100);
+      });
+    })
+    .catch(err => console.error('Error loading JSON:', err));
+  </script>
 </body>
 </html>
