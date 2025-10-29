@@ -2,152 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spoke Diagram</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.26.0/cytoscape.min.js"></script>
+<script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
 <style>
   body {
-    margin: 0;
-    padding: 0;
+    background-color: #111;
+    color: white;
     font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
-
   #controls {
-    background: #ffffff;
-    padding: 12px;
-    text-align: center;
-    position: relative;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #222;
+    padding: 10px;
+    display: flex;
+    align-items: center;
   }
-
-  #dropdown {
-    font-size: 16px;
-    padding: 6px 10px;
-    cursor: pointer;
+  select {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+    width: 250px;
   }
-
   #cy {
-    width: 100vw;
-    height: calc(100vh - 60px);
-    display: block;
-    background: #fafafa;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
   }
 </style>
 </head>
 <body>
+  <div id="controls">
+    <label for="nodeSelect">Select a player:</label>
+    <select id="nodeSelect"></select>
+  </div>
 
-<div id="controls">
-  <select id="dropdown">
-    <option value="">Select a player...</option>
-  </select>
-</div>
-
-<div id="cy"></div>
+  <div id="cy"></div>
 
 <script>
-  let cy;
-  let graphData = {};
-  let colorData = {};
+Promise.all([
+  fetch('player_graph.json').then(r => r.json()),
+  fetch('node_colors.json').then(r => r.json())
+]).then(([graph, colors]) => {
 
-  // Load both JSONs
-  Promise.all([
-    fetch('node_colors.json').then(res => res.json()),
-    fetch('player_graph.json').then(res => res.json())
-  ])
-  .then(([graph, colors]) => {
-    graphData = graph;
-    colorData = colors;
+  const sanitize = name => name.replace(/\s+/g, '_');
+  const elements = [];
+  const nodeSet = new Set();
 
-    const dropdown = document.getElementById('dropdown');
-
-    // Populate dropdown alphabetically
-    const players = Object.keys(graphData).sort((a, b) => a.localeCompare(b));
-    players.forEach(player => {
-      const option = document.createElement('option');
-      option.value = player;
-      option.textContent = player;
-      dropdown.appendChild(option);
+  // Build Cytoscape elements
+  for (const source in graph) {
+    const sourceId = sanitize(source);
+    nodeSet.add(sourceId);
+    elements.push({
+      data: { id: sourceId, label: source },
+      style: { 'background-color': colors[source] || '#6fa8dc' }
     });
 
-    // Initialize empty Cytoscape
-    cy = cytoscape({
-      container: document.getElementById('cy'),
-      elements: [],
-      style: [
-        {
-          selector: 'node',
-          style: {
-            'label': 'data(id)',
-            'text-valign': 'center',
-            'color': '#fff',
-            'background-color': '#0074D9',
-            'text-outline-width': 2,
-            'text-outline-color': '#0074D9',
-            'font-size': '12px'
-          }
-        },
-        {
-          selector: 'edge',
-          style: {
-            'width': 2,
-            'line-color': '#ccc'
-          }
-        }
-      ],
-      layout: { name: 'cose' }
-    });
-
-    // When a player is selected from dropdown
-    dropdown.addEventListener('change', () => {
-      const selectedPlayer = dropdown.value;
-      cy.elements().remove();
-
-      if (!selectedPlayer) return;
-
-      // Add selected player node
-      cy.add({
-        data: { id: selectedPlayer },
-        style: { 'background-color': colorData[selectedPlayer] || '#0074D9' }
-      });
-
-      // Add first-degree neighbors
-      const neighbors = graphData[selectedPlayer] || [];
-      neighbors.forEach(target => {
-        cy.add({
-          data: { id: target },
-          style: { 'background-color': colorData[target] || '#6fa8dc' }
+    for (const target of graph[source]) {
+      const targetId = sanitize(target);
+      if (!nodeSet.has(targetId)) {
+        elements.push({
+          data: { id: targetId, label: target },
+          style: { 'background-color': colors[target] || '#6fa8dc' }
         });
-        cy.add({ data: { source: selectedPlayer, target } });
-      });
+        nodeSet.add(targetId);
+      }
+      elements.push({ data: { source: sourceId, target: targetId } });
+    }
+  }
 
-      cy.layout({ name: 'cose', animate: true }).run();
-    });
-
-    // Click nodes to expand neighbors dynamically
-    cy.on('tap', 'node', evt => {
-      const nodeId = evt.target.id();
-      const neighbors = graphData[nodeId] || [];
-
-      neighbors.forEach(target => {
-        if (cy.getElementById(target).empty()) {
-          cy.add([
-            {
-              data: { id: target },
-              style: { 'background-color': colorData[target] || '#6fa8dc' }
-            },
-            { data: { source: nodeId, target } }
-          ]);
+  // Initialize Cytoscape
+  const cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements,
+    layout: { name: 'cose', animate: true },
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'label': 'data(label)',
+          'color': 'white',
+          'text-valign': 'center',
+          'text-outline-color': '#222',
+          'text-outline-width': 2,
+          'font-size': 12,
+          'width': 20,
+          'height': 20
         }
-      });
+      },
+      { selector: 'edge', style: { 'width': 2, 'line-color': '#888' } }
+    ]
+  });
 
-      cy.layout({ name: 'cose', animate: true }).run();
+  // Populate dropdown
+  const allNodes = Array.from(nodeSet).sort();
+  const dropdown = document.getElementById('nodeSelect');
+  allNodes.forEach(id => {
+    const label = cy.$id(id).data('label');
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = label;
+    dropdown.appendChild(opt);
+  });
+
+  // Update when dropdown changes
+  dropdown.addEventListener('change', () => {
+    cy.elements().removeClass('faded');
+    const selected = cy.$id(dropdown.value);
+
+    cy.nodes().forEach(n => {
+      n.style('width', 20);
+      n.style('height', 20);
     });
+    selected.style('width', 40);
+    selected.style('height', 40);
 
-  })
-  .catch(err => console.error('Error loading JSON files:', err));
+    const neighborhood = selected.closedNeighborhood();
+    cy.elements().addClass('faded');
+    neighborhood.removeClass('faded');
+    cy.animate({
+      fit: { eles: neighborhood, padding: 80 },
+      duration: 500
+    });
+  });
+
+  // Expand on click
+  cy.on('tap', 'node', evt => {
+    const node = evt.target;
+    const nodeId = node.id();
+    const label = node.data('label');
+
+    if (graph[label]) {
+      const existingTargets = new Set(cy.edges().map(e => e.data('target')));
+      for (const target of graph[label]) {
+        const targetId = sanitize(target);
+        if (!cy.$id(targetId).nonempty()) {
+          cy.add({
+            data: {
+              id: targetId,
+              label: target
+            },
+            style: {
+              'background-color': colors[target] || '#6fa8dc'
+            }
+          });
+        }
+        if (!existingTargets.has(targetId)) {
+          cy.add({ data: { source: nodeId, target: targetId } });
+        }
+      }
+      cy.layout({ name: 'cose', animate: true }).run();
+    }
+  });
+});
 </script>
-
 </body>
 </html>
