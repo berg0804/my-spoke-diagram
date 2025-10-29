@@ -7937,7 +7937,10 @@
     "Ales Hemsky",
     "Anson Carter",
     "Bill Guerin",
-    "Doug Lynch"
+    "Doug Lynch",
+    "Jeff Schultz",
+    "Mikhail Yunkov",
+    "Sergei Gonchar"
   ],
   "Ales Hemsky": [
     "Anson Carter",
@@ -7974,6 +7977,7 @@
     "Doug Lynch",
     "Jason Arnott",
     "Jay Barriball",
+    "Mike Lee",
     "Shaone Morrisonn",
     "Valeri Zelepukin",
     "Ville Nieminen"
@@ -7988,14 +7992,22 @@
     "Shaone Morrisonn"
   ],
   "Yan Stastny": [
+    "Denis Reul",
     "James DeLory",
     "Marty Reasoner",
     "Milan Lucic",
+    "Pierre-Cedric Labrie",
     "Sergei Samsonov"
   ],
   "Sergei Samsonov": [
+    "Bryan Allen",
+    "Glen Wesley",
+    "Jassen Cullimore",
+    "Johnathan Aitken",
+    "Kyle McLaren",
     "Marty Reasoner",
     "Milan Lucic",
+    "Tony Salmelainen",
     "Yan Stastny"
   ],
   "Warren Foegele": [
@@ -8027,12 +8039,15 @@
   "Chris Wideman": [
     "Alexander Petrovic",
     "Cole Reinhardt",
+    "Jean-Sebastien Dea",
     "John Ludvig"
   ],
   "Kyle Brodziak": [
     "Darcy Kuemper",
+    "Jan Bednar",
     "Kyle Bigos",
-    "Marc-Olivier Roy (1)"
+    "Marc-Olivier Roy (1)",
+    "Mike Green (1985)"
   ],
   "Marc-Olivier Roy (1)": [
     "Darcy Kuemper",
@@ -8040,9 +8055,16 @@
     "Kyle Brodziak"
   ],
   "Kyle Bigos": [
+    "Brad Richards",
+    "Brian Rolston",
     "Darcy Kuemper",
+    "Jeff Halpern",
+    "Johan Holmqvist",
+    "Jussi Jokinen",
     "Kyle Brodziak",
-    "Marc-Olivier Roy (1)"
+    "Lee Moffie",
+    "Marc-Olivier Roy (1)",
+    "Mike Smith"
   ],
   "Lane Hutson": [
     "Brett Kulak",
@@ -8264,6 +8286,9 @@
     "Serron Noel"
   ],
   "Dave Bolland": [
+    "Carl Dahlstrom",
+    "Fredrik Bergvik",
+    "Fredrik Olofsson",
     "Lawson Crouse",
     "Max Gildon",
     "Serron Noel"
@@ -8282,16 +8307,20 @@
     "Ales Pisa",
     "Anson Carter",
     "Cory Cross",
+    "Dimitri Patzold",
     "Mike Vernon",
     "Niclas Bergfors",
     "Pat Rissmiller",
     "Sean Kuraly",
-    "Sean O'Connor"
+    "Sean O'Connor",
+    "Todd Harvey"
   ],
   "Pat Rissmiller": [
+    "Donald Brashear",
     "Niclas Bergfors",
     "Radek Dvorak",
-    "Sean Kuraly"
+    "Sean Kuraly",
+    "Todd White"
   ],
   "Niclas Bergfors": [
     "Anssi Salmela",
@@ -14583,6 +14612,11 @@
     "Jonah Gadjovich"
   ],
   "Jussi Jokinen": [
+    "Brad Richards",
+    "Jeff Halpern",
+    "Johan Holmqvist",
+    "Kyle Bigos",
+    "Mike Smith",
     "Thomas Vanek",
     "Tyler Motte"
   ],
@@ -14594,10 +14628,15 @@
     "Taylor Leier"
   ],
   "Sami Pahlsson": [
+    "Brian Rolston",
+    "Dave Andreychuk",
     "James Wisniewski",
     "Josh Anderson",
     "Logan Stephenson",
+    "Martin Grenier",
+    "Martin Samuelsson",
     "Petri Kontiola",
+    "Ray Bourque",
     "Taylor Ellington",
     "Taylor Leier"
   ],
@@ -15960,6 +15999,9 @@
     "Veeti Louhivaara"
   ],
   "Carl Dahlstrom": [
+    "Dave Bolland",
+    "Fredrik Bergvik",
+    "Fredrik Olofsson",
     "Noah Laba",
     "Paul Stastny"
   ],
@@ -16518,6 +16560,7 @@
     "Lukas Krajicek",
     "Rene Bourque",
     "Roberto Luongo",
+    "Sergei Samsonov",
     "Sergei Shirokov",
     "Todd Bertuzzi"
   ],
@@ -16619,7 +16662,10 @@
     "Travis Hamonic"
   ],
   "Fredrik Bergvik": [
+    "Carl Dahlstrom",
+    "Dave Bolland",
     "Francois Beauchemin",
+    "Fredrik Olofsson",
     "Jake Gardiner",
     "Joffrey Lupul"
   ],
@@ -17574,8 +17620,13 @@
     "Craig Smith"
   ],
   "Mike Smith": [
+    "Brad Richards",
     "Brandon Hickey",
     "Chad Johnson",
+    "Jeff Halpern",
+    "Johan Holmqvist",
+    "Jussi Jokinen",
+    "Kyle Bigos",
     "Niklas Nordgren (2)"
   ],
   "Brian Gibbons": [
@@ -17651,8 +17702,11 @@
     "Torrey Mitchell"
   ],
   "Kyle McLaren": [
+    "Glen Wesley",
     "Jeff Hackett",
     "Jeff Jillson",
+    "Johnathan Aitken",
+    "Sergei Samsonov",
     "Torrey Mitchell"
   ],
   "Colby Cohen": [
@@ -17877,6 +17931,10 @@
     "Radim Vrbata"
   ],
   "David Hale": [
+    "Brian Rolston",
+    "Claude Lemieux",
+    "Martin Samuelsson",
+    "Matt DeMarchi",
     "Radim Vrbata",
     "Todd Fedoruk"
   ],
@@ -20035,5 +20093,193 @@
   "Ryan Smyth": [
     "Colin Fraser",
     "Dmitry Sinitsyn"
+  ],
+  "Jeff Schultz": [
+    "Mikhail Yunkov",
+    "Sergei Gonchar",
+    "Shaone Morrisonn"
+  ],
+  "Sergei Gonchar": [
+    "Jeff Schultz",
+    "Mikhail Yunkov",
+    "Shaone Morrisonn"
+  ],
+  "Mikhail Yunkov": [
+    "Jeff Schultz",
+    "Sergei Gonchar",
+    "Shaone Morrisonn"
+  ],
+  "Mike Lee": [
+    "Bill Guerin",
+    "Jason Clark"
+  ],
+  "Jason Clark": [
+    "Mike Lee"
+  ],
+  "Denis Reul": [
+    "Yan Stastny"
+  ],
+  "Pierre-Cedric Labrie": [
+    "John Ramage",
+    "Trevor Murphy",
+    "Tyler Gaudet",
+    "Yan Stastny"
+  ],
+  "Trevor Murphy": [
+    "John Ramage",
+    "Pierre-Cedric Labrie",
+    "Tyler Gaudet"
+  ],
+  "Tyler Gaudet": [
+    "John Ramage",
+    "Pierre-Cedric Labrie",
+    "Trevor Murphy"
+  ],
+  "John Ramage": [
+    "Pierre-Cedric Labrie",
+    "Trevor Murphy",
+    "Tyler Gaudet"
+  ],
+  "Tony Salmelainen": [
+    "Jassen Cullimore",
+    "Sergei Samsonov"
+  ],
+  "Jassen Cullimore": [
+    "Sergei Samsonov",
+    "Tony Salmelainen"
+  ],
+  "Glen Wesley": [
+    "Johnathan Aitken",
+    "Kyle McLaren",
+    "Sergei Samsonov"
+  ],
+  "Johnathan Aitken": [
+    "Glen Wesley",
+    "Kyle McLaren",
+    "Sergei Samsonov"
+  ],
+  "Jean-Sebastien Dea": [
+    "Chris Wideman"
+  ],
+  "Mike Green (1985)": [
+    "Jan Bednar",
+    "Kyle Brodziak"
+  ],
+  "Jan Bednar": [
+    "Kyle Brodziak",
+    "Mike Green (1985)"
+  ],
+  "Lee Moffie": [
+    "Kyle Bigos"
+  ],
+  "Brad Richards": [
+    "Jeff Halpern",
+    "Johan Holmqvist",
+    "Jussi Jokinen",
+    "Kyle Bigos",
+    "Mike Smith"
+  ],
+  "Jeff Halpern": [
+    "Brad Richards",
+    "Johan Holmqvist",
+    "Jussi Jokinen",
+    "Kyle Bigos",
+    "Mike Smith"
+  ],
+  "Johan Holmqvist": [
+    "Brad Richards",
+    "Jeff Halpern",
+    "Jussi Jokinen",
+    "Kyle Bigos",
+    "Mike Smith"
+  ],
+  "Brian Rolston": [
+    "Claude Lemieux",
+    "Dave Andreychuk",
+    "David Hale",
+    "Kyle Bigos",
+    "Martin Grenier",
+    "Martin Samuelsson",
+    "Matt DeMarchi",
+    "Mike Mottau",
+    "Ray Bourque",
+    "Sami Pahlsson",
+    "Trent Hunter",
+    "Yannick Riendeau"
+  ],
+  "Claude Lemieux": [
+    "Brian Rolston",
+    "David Hale",
+    "Martin Samuelsson",
+    "Matt DeMarchi"
+  ],
+  "Martin Samuelsson": [
+    "Brian Rolston",
+    "Claude Lemieux",
+    "Dave Andreychuk",
+    "David Hale",
+    "Martin Grenier",
+    "Matt DeMarchi",
+    "Ray Bourque",
+    "Sami Pahlsson"
+  ],
+  "Matt DeMarchi": [
+    "Brian Rolston",
+    "Claude Lemieux",
+    "David Hale",
+    "Martin Samuelsson"
+  ],
+  "Ray Bourque": [
+    "Brian Rolston",
+    "Dave Andreychuk",
+    "Martin Grenier",
+    "Martin Samuelsson",
+    "Sami Pahlsson"
+  ],
+  "Dave Andreychuk": [
+    "Brian Rolston",
+    "Martin Grenier",
+    "Martin Samuelsson",
+    "Ray Bourque",
+    "Sami Pahlsson"
+  ],
+  "Martin Grenier": [
+    "Brian Rolston",
+    "Dave Andreychuk",
+    "Martin Samuelsson",
+    "Ray Bourque",
+    "Sami Pahlsson"
+  ],
+  "Trent Hunter": [
+    "Brian Rolston"
+  ],
+  "Yannick Riendeau": [
+    "Brian Rolston",
+    "Mike Mottau"
+  ],
+  "Mike Mottau": [
+    "Brian Rolston",
+    "Yannick Riendeau"
+  ],
+  "Fredrik Olofsson": [
+    "Carl Dahlstrom",
+    "Dave Bolland",
+    "Fredrik Bergvik"
+  ],
+  "Todd Harvey": [
+    "Dimitri Patzold",
+    "Radek Dvorak"
+  ],
+  "Dimitri Patzold": [
+    "Radek Dvorak",
+    "Todd Harvey"
+  ],
+  "Todd White": [
+    "Donald Brashear",
+    "Pat Rissmiller"
+  ],
+  "Donald Brashear": [
+    "Pat Rissmiller",
+    "Todd White"
   ]
 }
