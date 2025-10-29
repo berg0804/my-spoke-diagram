@@ -52,7 +52,6 @@
     let colorData = {};
     let cy;
 
-    // Load both JSONs
     Promise.all([
       fetch('player_graph.json').then(res => res.json()),
       fetch('node_colors.json').then(res => res.json())
@@ -94,7 +93,6 @@
       const pathBtn = document.getElementById('pathBtn');
       const clearBtn = document.getElementById('clearBtn');
 
-      // Populate dropdowns alphabetically
       const players = Object.keys(graphData).sort((a,b) => a.localeCompare(b));
       players.forEach(player => {
         const opt1 = document.createElement('option');
@@ -108,35 +106,42 @@
         targetDropdown.appendChild(opt2);
       });
 
-      // On selecting a player
+      // Build full network in background
+      const allElements = [];
+      players.forEach(source => {
+        if (!cy.getElementById(source).length) {
+          allElements.push({ data: { id: source } });
+        }
+        const neighbors = graphData[source] || [];
+        neighbors.forEach(target => {
+          if (!cy.getElementById(target).length) {
+            allElements.push({ data: { id: target } });
+          }
+          allElements.push({ data: { source, target } });
+        });
+      });
+      cy.add(allElements);
+
+      // When selecting dropdown, show just 1-degree view
       dropdown.addEventListener('change', () => {
         const selectedPlayer = dropdown.value;
         if (!selectedPlayer) return;
 
-        cy.elements().remove();
-        const neighbors = graphData[selectedPlayer] || [];
+        cy.elements().style('display', 'none'); // hide all
+        const toShow = cy.collection();
 
-        // Add selected player (larger)
-        cy.add({
-          data: { id: selectedPlayer },
-          style: { 
-            'background-color': colorData[selectedPlayer] || '#0074D9',
-            'width': 40,
-            'height': 40
-          }
-        });
+        const mainNode = cy.getElementById(selectedPlayer);
+        const neighbors = mainNode.connectedEdges().connectedNodes();
 
-        // Add neighbors
-        neighbors.forEach(target => {
-          cy.add({
-            data: { id: target },
-            style: { 
-              'background-color': colorData[target] || '#6fa8dc',
-              'width': 25,
-              'height': 25
-            }
-          });
-          cy.add({ data: { source: selectedPlayer, target } });
+        toShow.merge(mainNode).merge(neighbors).merge(mainNode.connectedEdges());
+        toShow.style('display', 'element');
+
+        // make selected node larger
+        cy.nodes().style({ 'width': 25, 'height': 25 });
+        mainNode.style({ 
+          'width': 40, 
+          'height': 40, 
+          'background-color': colorData[selectedPlayer] || '#0074D9'
         });
 
         cy.layout({ name: 'cose', animate: true }).run();
@@ -145,28 +150,13 @@
       // Click node to expand
       cy.on('tap', 'node', evt => {
         const nodeId = evt.target.id();
-        const neighbors = graphData[nodeId] || [];
-
-        neighbors.forEach(target => {
-          if (cy.getElementById(target).empty()) {
-            cy.add([
-              {
-                data: { id: target },
-                style: { 
-                  'background-color': colorData[target] || '#6fa8dc',
-                  'width': 25,
-                  'height': 25
-                }
-              },
-              { data: { source: nodeId, target } }
-            ]);
-          }
-        });
-
+        const node = cy.getElementById(nodeId);
+        node.connectedEdges().connectedNodes().style('display', 'element');
+        node.connectedEdges().style('display', 'element');
         cy.layout({ name: 'cose', animate: true }).run();
       });
 
-      // Shortest path button
+      // Shortest path
       pathBtn.addEventListener('click', () => {
         const start = dropdown.value;
         const end = targetDropdown.value;
@@ -175,7 +165,6 @@
           return;
         }
 
-        // Compute Dijkstra shortest path
         const dijkstra = cy.elements().dijkstra(`#${CSS.escape(start)}`);
         const path = dijkstra.pathTo(cy.$(`#${CSS.escape(end)}`));
 
@@ -184,24 +173,21 @@
           return;
         }
 
-        // Reset styles
-        cy.nodes().forEach(n => n.style('border-width', 0));
-        cy.edges().forEach(e => e.style('line-color', '#888'));
+        cy.nodes().style('border-width', 0);
+        cy.edges().style('line-color', '#888');
 
-        // Highlight path
-        path.nodes().forEach(n => n.style({
+        path.nodes().style({
           'border-width': 4,
           'border-color': 'yellow'
-        }));
-        path.edges().forEach(e => e.style('line-color', 'yellow'));
+        });
+        path.edges().style('line-color', 'yellow');
 
         cy.fit(path, 100);
       });
 
-      // Clear button
       clearBtn.addEventListener('click', () => {
-        cy.nodes().forEach(n => n.style('border-width', 0));
-        cy.edges().forEach(e => e.style('line-color', '#888'));
+        cy.nodes().style('border-width', 0);
+        cy.edges().style('line-color', '#888');
         cy.fit(cy.elements(), 100);
       });
     })
