@@ -4224,7 +4224,7 @@
     "K'Andre Miller",
     "Mads Sogaard",
     "Ryan Reaves",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg",
     "Vincent Dunn"
   ],
@@ -4795,7 +4795,7 @@
     "Nick Moutrey",
     "Robert Bortuzzo",
     "Ryan Reaves",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg",
     "Vincent Dunn"
   ],
@@ -6369,6 +6369,7 @@
     "Peter Holland"
   ],
   "Peter Holland": [
+    "Adam Cracknell",
     "Brad Staubitz",
     "Darren Raddysh",
     "Jesse Blacker",
@@ -6472,9 +6473,11 @@
     "Tim Soderlund"
   ],
   "Ivan Nalimov": [
+    "Brandon Mashinter",
     "Justin Kirkland",
     "Nick Schmaltz",
-    "Nikolay Goldobin"
+    "Nikolay Goldobin",
+    "Tommy Grant"
   ],
   "Hannu Toivonen": [
     "Carl Soderberg",
@@ -6485,7 +6488,9 @@
   "Joe Fallon": [
     "Danny Richmond",
     "Daryl Boyle",
-    "Hannu Toivonen"
+    "Hannu Toivonen",
+    "Jason Morgan",
+    "Ville Nieminen"
   ],
   "Daryl Boyle": [
     "Danny Richmond",
@@ -6576,11 +6581,20 @@
     "Slava Demin"
   ],
   "Slava Demin": [
+    "Anttoni Honka",
+    "Derick Brassard",
     "Drew Commesso",
+    "Filip Gustavsson",
+    "Ian Cole",
+    "Justus Annunen",
+    "K'Andre Miller",
     "Kasper Puutio",
     "Malcolm Subban",
     "Martins Dzierkals",
-    "Robin Lehner"
+    "Robin Lehner",
+    "Ryan Reaves",
+    "Tobias Lindberg",
+    "Vincent Dunn"
   ],
   "Robin Lehner": [
     "Antoine Vermette",
@@ -6604,10 +6618,14 @@
   ],
   "Martins Dzierkals": [
     "Drew Commesso",
+    "Gabriel Carlsson",
     "Kasper Puutio",
     "Malcolm Subban",
+    "Michael Leighton",
     "Robin Lehner",
-    "Slava Demin"
+    "Slava Demin",
+    "Steve Mason",
+    "Travis Dermott"
   ],
   "Drew Helleson": [
     "Carey Terrance",
@@ -6767,12 +6785,23 @@
   ],
   "Shane O'Brien": [
     "Alex Tanguay",
+    "Colton Gillies",
     "Cory Sarich",
-    "David Jones"
+    "Dan Gendur",
+    "David Jones",
+    "Gerald Coleman",
+    "Jonas Andersson",
+    "Juraj Simek",
+    "Luca Cunti",
+    "Lukas Krajicek",
+    "Michel Ouellet",
+    "Ryan Parent"
   ],
   "David Jones": [
     "Alex Tanguay",
     "Cory Sarich",
+    "Matthew Phillips",
+    "Niklas Backstrom",
     "Shane O'Brien"
   ],
   "Anton Lindholm": [
@@ -6813,7 +6842,7 @@
     "Nils Aman",
     "Riley Sheahan",
     "Ryan Reaves",
-    "Stanislav Demin",
+    "Slava Demin",
     "Steven Delisle",
     "Tobias Lindberg",
     "Vincent Dunn",
@@ -6832,6 +6861,8 @@
     "Devan Dubnyk",
     "Ian Cole",
     "Jared Knight",
+    "Jordie Benn",
+    "Markus Phillips",
     "Max McCue",
     "Mikhail Grabovski"
   ],
@@ -6896,7 +6927,7 @@
     "Reko Alanko",
     "Ryan Reaves",
     "Scott Wedgewood",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg",
     "Vincent Dunn"
   ],
@@ -6959,6 +6990,8 @@
     "Colin Wilson"
   ],
   "Colin Wilson": [
+    "Aaron Ness",
+    "Josh Bailey",
     "Luke Schenn",
     "Marc Del Gaizo",
     "Mat Clark"
@@ -6999,6 +7032,7 @@
   ],
   "Andrew Hammond": [
     "Bowen Byram",
+    "Brandon Baddock",
     "Filip Hallander",
     "Kyle Turris",
     "Matt Duchene",
@@ -7173,8 +7207,13 @@
     "Sean Walker"
   ],
   "Erik Johnson": [
+    "Chris Stewart",
+    "Duncan Siemens",
     "Givani Smith",
-    "Kevin He"
+    "Jay McClement",
+    "Kevin He",
+    "Kevin Shattenkirk",
+    "Ty Rattie"
   ],
   "Givani Smith": [
     "2026 2nd Round (SJS/COL)",
@@ -7203,13 +7242,17 @@
     "Paul Stastny"
   ],
   "Derek Morris": [
+    "Anthony Camara",
     "Chris Drury",
     "Chris Gratton",
     "Dean McAmmond",
+    "Dmitri Kalinin",
     "Jeff Shantz",
     "Keith Ballard",
+    "Nigel Dawes",
     "Ossi Vaananen",
     "Paul Stastny",
+    "Petr Prucha",
     "Stephane Yelle"
   ],
   "Danil Gushchin": [
@@ -7326,7 +7369,11 @@
     "Shakir Mukhamadullin"
   ],
   "Jamie Langenbrunner": [
-    "Blake Coleman"
+    "Blake Coleman",
+    "Daniel Paille",
+    "Jason Arnott",
+    "Joe Nieuwendyk",
+    "Randy McKay"
   ],
   "Atte Joki": [
     "Colin Miller"
@@ -7409,7 +7456,8 @@
   "Jason Demers": [
     "Brenden Dillon",
     "Fredrik Karlstrom",
-    "Jamie McGinn"
+    "Jamie McGinn",
+    "Rob Davison"
   ],
   "Cody Ceci": [
     "Aaron Luchuk",
@@ -7487,7 +7535,11 @@
     "Noah Rod"
   ],
   "Scott Wilson": [
-    "Arseny Gritsyuk"
+    "Arseny Gritsyuk",
+    "Chris Crane",
+    "Jesper Eliasson",
+    "Justin Almeida",
+    "Riley Sheahan"
   ],
   "Arseny Gritsyuk": [
     "Alexei Protas",
@@ -7502,8 +7554,12 @@
     "Dominic Turgeon"
   ],
   "Dominic Turgeon": [
+    "Ben Scrivens",
     "Brent Gates",
-    "Elvis Merzlikins"
+    "Elvis Merzlikins",
+    "Marian Gaborik",
+    "Matt Frattin",
+    "Travis Dermott"
   ],
   "Roope Hintz": [
     "Erik Cole",
@@ -7523,16 +7579,24 @@
     "Vili Saarijarvi"
   ],
   "Erik Cole": [
+    "Connor Crisp",
+    "Jesse Blacker",
+    "Joni Pitkanen",
+    "Matt Kennedy",
     "Mattias Backman",
     "Mattias Janmark",
+    "Michael Ryder",
+    "Patrick O'Sullivan",
     "Roope Hintz",
     "Vili Saarijarvi"
   ],
   "Mattias Backman": [
     "Erik Cole",
     "Mattias Janmark",
+    "Ole-Kristian Tollefsen",
     "Roope Hintz",
-    "Vili Saarijarvi"
+    "Vili Saarijarvi",
+    "Ville Leino"
   ],
   "Vladislav Namestnikov": [
     "Brett Howden",
@@ -7568,6 +7632,8 @@
   "Jack Bar": [
     "Andrew Sturtz",
     "Artyom Grushnikov",
+    "Hayden Verbeek",
+    "Jon Merrill",
     "Mike Reilly",
     "Sebastian Cossa",
     "Wyatt Johnston"
@@ -7594,9 +7660,13 @@
     "Andreas Athanasiou",
     "BJ Crombeen",
     "Brock Faber",
+    "Chris Pronger",
     "Kristian Oldham",
+    "Nicklas Grossmann",
+    "Otto Koivula",
     "Ryan Kuffner",
-    "Ryan Spooner"
+    "Ryan Spooner",
+    "Teddy Purcell"
   ],
   "Brock Faber": [
     "Aatu Raty",
@@ -7615,9 +7685,12 @@
     "Sam Gagner"
   ],
   "Shawn Matthias": [
+    "Blair Jones",
+    "Chris Lawrence",
     "Chris Summers",
     "Colin Smith",
     "Cory Emmerton",
+    "Denis Gauthier",
     "Jacob Markstrom",
     "Jordan Bendfeld",
     "Keaton Middleton",
@@ -7628,10 +7701,18 @@
   ],
   "Todd Bertuzzi": [
     "Adam Deadmarsh",
+    "Alex Auld",
+    "Bryan Allen",
+    "Bryan McCabe",
+    "Jarkko Ruutu",
+    "Lukas Krajicek",
     "Mark Fitzpatrick",
     "Nick Spaling",
+    "Roberto Luongo",
     "Ron Hextall",
-    "Shawn Matthias"
+    "Sergei Shirokov",
+    "Shawn Matthias",
+    "Trevor Linden"
   ],
   "Nick Spaling": [
     "Aaron Ness",
@@ -7658,9 +7739,12 @@
     "Brendan Guhle",
     "Colin White b.1997",
     "Dylan McIlrath",
+    "Johnathan MacLeod",
     "Jussi Jokinen",
     "Kasper Kotkansalo",
     "Matt Moulson",
+    "Nikolas Koberstein",
+    "Sebastian Collberg",
     "Tyler Motte"
   ],
   "Dylan McIlrath": [
@@ -7689,17 +7773,22 @@
     "Eemil Viro"
   ],
   "Tim Berni": [
+    "Filip Cederqvist",
     "Steve Ott"
   ],
   "David Legwand": [
+    "Andrei Nazarov",
     "Brad Stuart",
+    "Bryan Marchment",
     "Calle Jarnkrok",
     "Colin White b.1997",
+    "David Shaw",
     "Geoff Koch",
     "Jonathan Cheechoo",
     "Julius Bergman",
     "Patrick Eaves",
-    "Robin Lehner"
+    "Robin Lehner",
+    "Vincent Lecavalier"
   ],
   "Julius Bergman": [
     "Adam McQuaid",
@@ -7740,6 +7829,7 @@
   "Dominik Kubalik": [
     "Alex DeBrincat",
     "Dean Letourneau",
+    "Dmitry Sinitsyn",
     "Donovan Sebrango",
     "Frederick Dichow",
     "Javon Moore"
@@ -7882,8 +7972,10 @@
     "Anson Carter",
     "David Perron",
     "Doug Lynch",
+    "Jason Arnott",
     "Jay Barriball",
     "Shaone Morrisonn",
+    "Valeri Zelepukin",
     "Ville Nieminen"
   ],
   "Doug Lynch": [
@@ -8306,7 +8398,9 @@
     "Rem Pitlick"
   ],
   "Josh Bailey": [
+    "2026 2nd Round (CHI/NYI)",
     "Aaron Ness",
+    "Colin Wilson",
     "Nick Spaling",
     "Tomas Vokoun"
   ],
@@ -8316,6 +8410,7 @@
     "Nick Spaling"
   ],
   "Aaron Ness": [
+    "Colin Wilson",
     "Josh Bailey",
     "Nick Spaling",
     "Tomas Vokoun"
@@ -8388,7 +8483,10 @@
     "Dmitri Voronkov",
     "Eric Hjorth",
     "Jared McCann",
+    "Jesper Eliasson",
+    "Justin Almeida",
     "Nick Bjugstad",
+    "Scott Wilson",
     "Vladislav Kolyachonok"
   ],
   "Sam Montembeault": [
@@ -8618,7 +8716,10 @@
   ],
   "Patrick O'Sullivan": [
     "Brian Dumoulin",
-    "Justin Williams"
+    "Erik Cole",
+    "Jesse Blacker",
+    "Justin Williams",
+    "Matt Kennedy"
   ],
   "Justin Williams": [
     "Brian Dumoulin",
@@ -9124,11 +9225,16 @@
     "Chris Stewart"
   ],
   "Chris Stewart": [
+    "Duncan Siemens",
+    "Erik Johnson",
     "Jack Roslovic",
     "Jaroslav Halak",
+    "Jay McClement",
+    "Kevin Shattenkirk",
     "Linus Nassen",
     "Ryan Miller",
     "Steve Ott",
+    "Ty Rattie",
     "Ukko-Pekka Luukkonen",
     "William Carrier"
   ],
@@ -9979,7 +10085,9 @@
   ],
   "Jon Merrill": [
     "Anssi Salmela",
+    "Hayden Verbeek",
     "Ilya Kovalchuk",
+    "Jack Bar",
     "Johnny Oduya",
     "Justin Holl",
     "Kevin Hayes",
@@ -11156,7 +11264,7 @@
     "Justus Annunen",
     "Ryan Reaves",
     "Scott Morrow b.2002",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg",
     "Vincent Dunn"
   ],
@@ -11299,7 +11407,7 @@
     "Nicholas Moldenhauer",
     "Oskar Sundqvist",
     "Quinn Beauchesne",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg",
     "Vincent Dunn",
     "Zachary Lauzon"
@@ -11382,7 +11490,12 @@
     "Ziyat Paigin"
   ],
   "Mark Messier": [
-    "Ryan Callahan"
+    "Bernie Nicholls",
+    "David Shaw",
+    "Jeff Beukeboom",
+    "Louie DeBrusk",
+    "Ryan Callahan",
+    "Steven Rice"
   ],
   "Josh Ho-Sang": [
     "Anthony Beauvillier",
@@ -11600,7 +11713,12 @@
     "Tobias Lindberg"
   ],
   "Alex Auld": [
-    "Mark Stone"
+    "Bryan Allen",
+    "Lukas Krajicek",
+    "Mark Stone",
+    "Roberto Luongo",
+    "Sergei Shirokov",
+    "Todd Bertuzzi"
   ],
   "Roby Jarventie": [
     "David Lewandowski",
@@ -11624,7 +11742,7 @@
     "Kevin Bieksa",
     "Nick Bonino",
     "Ryan Reaves",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg",
     "Vincent Dunn",
     "Will Lockwwod"
@@ -11825,7 +11943,7 @@
     "Peter Diliberatore",
     "Ryan Reaves",
     "Ryan Rupert",
-    "Stanislav Demin",
+    "Slava Demin",
     "Vincent Dunn"
   ],
   "Dion Phaneuf": [
@@ -11885,9 +12003,11 @@
     "Cody Donaghey",
     "Colin Greening",
     "Dion Phaneuf",
+    "Dominic Turgeon",
     "Eemeli Rasanen",
     "Jared Cowen",
     "Jonathan Bernier",
+    "Marian Gaborik",
     "Milan Michalek",
     "Ryan Rupert",
     "Tobias Lindberg",
@@ -12022,8 +12142,11 @@
     "Ivan Fedotov"
   ],
   "Nicklas Grossmann": [
+    "Chris Pronger",
     "Devin Shore",
-    "Jake Guentzel"
+    "Jake Guentzel",
+    "Otto Koivula",
+    "Sam Gagner"
   ],
   "Seth Barton": [
     "Petr Mrazek"
@@ -12099,7 +12222,11 @@
     "Sam O'Reilly"
   ],
   "Vincent Lecavalier": [
+    "Andrei Nazarov",
+    "Bryan Marchment",
     "Carsen Twarynski",
+    "David Legwand",
+    "David Shaw",
     "Jordan Weal",
     "Luke Schenn"
   ],
@@ -12149,9 +12276,11 @@
     "Ned Lukacevic"
   ],
   "Denis Gauthier": [
+    "Cory Emmerton",
     "Jason Zucker",
     "Ned Lukacevic",
-    "Patrik Hersley"
+    "Patrik Hersley",
+    "Shawn Matthias"
   ],
   "Ned Lukacevic": [
     "Andrew Alberts",
@@ -12504,6 +12633,7 @@
   ],
   "Angelo Esposito": [
     "Daultan Leveille",
+    "Kenndal McArdle",
     "Marian Hossa",
     "Pascal Dupuis"
   ],
@@ -12650,21 +12780,8 @@
     "Justus Annunen",
     "K'Andre Miller",
     "Ryan Reaves",
-    "Stanislav Demin",
+    "Slava Demin",
     "Tobias Lindberg"
-  ],
-  "Stanislav Demin": [
-    "Andrey Pedan",
-    "Anttoni Honka",
-    "Derick Brassard",
-    "Derrick Pouliot",
-    "Filip Gustavsson",
-    "Ian Cole",
-    "Justus Annunen",
-    "K'Andre Miller",
-    "Ryan Reaves",
-    "Tobias Lindberg",
-    "Vincent Dunn"
   ],
   "Matt Bradley": [
     "Wayne Primeau"
@@ -12975,10 +13092,13 @@
     "Ryan Reaves"
   ],
   "Otto Koivula": [
+    "Chris Pronger",
     "Jacob McGrew",
     "MacKenzie Entwistle",
     "Maxim Letunov",
-    "Noel Hoefenmayer"
+    "Nicklas Grossmann",
+    "Noel Hoefenmayer",
+    "Sam Gagner"
   ],
   "Maxim Letunov": [
     "Jacob McGrew",
@@ -13556,7 +13676,9 @@
   "Ville Nieminen": [
     "Bill Guerin",
     "David Perron",
-    "Jay Barriball"
+    "Jason Morgan",
+    "Jay Barriball",
+    "Joe Fallon"
   ],
   "Jay Barriball": [
     "Bill Guerin",
@@ -13848,7 +13970,10 @@
   ],
   "Johnathan MacLeod": [
     "Dominik Masin",
-    "Josh Ho-Sang"
+    "Josh Ho-Sang",
+    "Nikolas Koberstein",
+    "Sebastian Collberg",
+    "Thomas Vanek"
   ],
   "JT Miller": [
     "Brett Howden",
@@ -13938,8 +14063,10 @@
   "Gabriel Carlsson": [
     "Braydon Coburn",
     "Jeremy Bracco",
+    "Martins Dzierkals",
     "Matej Tomek",
     "Radko Gudas",
+    "Travis Dermott",
     "Travis Konecny"
   ],
   "Braydon Coburn": [
@@ -13965,9 +14092,12 @@
     "Wayne Primeau"
   ],
   "Marc Bergevin": [
+    "Ben Hankinson",
     "Bob Bassen",
     "Brian Holzinger",
     "Gary Nylund",
+    "Jason Doyle (1)",
+    "Shawn Burr",
     "Steve Konroyd"
   ],
   "Anthony Greco": [
@@ -14037,8 +14167,11 @@
   "Jesse Blacker": [
     "Ales Kotalik",
     "Brad Staubitz",
+    "Erik Cole",
     "Marcus Pettersson",
+    "Matt Kennedy",
     "Ondrej Kase",
+    "Patrick O'Sullivan",
     "Peter Holland"
   ],
   "Michael Callow": [
@@ -14557,9 +14690,14 @@
     "Shawn Matthias"
   ],
   "Roberto Luongo": [
+    "Alex Auld",
+    "Bryan Allen",
     "Jacob Markstrom",
+    "Lukas Krajicek",
+    "Sergei Shirokov",
     "Shawn Matthias",
-    "Steven Anthony"
+    "Steven Anthony",
+    "Todd Bertuzzi"
   ],
   "Victor Oreskovich": [
     "Keith Ballard",
@@ -14649,6 +14787,10 @@
     "Jack Rathbone",
     "Mark Friedman",
     "Ty Glover"
+  ],
+  "Stanislav Demin": [
+    "Andrey Pedan",
+    "Derrick Pouliot"
   ],
   "Andrey Pedan": [
     "Derrick Pouliot",
@@ -14939,6 +15081,8 @@
     "Jack Smith",
     "Joel Armia",
     "Kieran Ruscheinski",
+    "Martins Dzierkals",
+    "Michael Leighton",
     "Simon Bourque"
   ],
   "Simon Bourque": [
@@ -15092,8 +15236,16 @@
     "Olivier Rodrigue"
   ],
   "Jason Arnott": [
+    "Bill Guerin",
+    "Daniel Paille",
     "David Steckel",
-    "Raphael Bussieres"
+    "Jamie Langenbrunner",
+    "Joe Nieuwendyk",
+    "Magnus Hellberg",
+    "Matt Halischuk",
+    "Randy McKay",
+    "Raphael Bussieres",
+    "Valeri Zelepukin"
   ],
   "Raphael Bussieres": [
     "David Steckel",
@@ -15166,8 +15318,13 @@
   ],
   "Kevin Shattenkirk": [
     "Brad Malone",
+    "Chris Stewart",
+    "Duncan Siemens",
+    "Erik Johnson",
+    "Jay McClement",
     "Morgan Frost",
     "Pheonix Copley",
+    "Ty Rattie",
     "Zachary Sanford"
   ],
   "Brad Malone": [
@@ -15593,7 +15750,8 @@
   ],
   "Filip Cederqvist": [
     "Carter Gylander",
-    "Gustav Berglund"
+    "Gustav Berglund",
+    "Tim Berni"
   ],
   "Carter Gylander": [
     "Filip Cederqvist",
@@ -15848,11 +16006,14 @@
     "Derek Dorsett",
     "Derick Brassard",
     "Dion Phaneuf",
+    "Dominic Turgeon",
     "Filip Nordberg",
     "John Moore",
+    "Matt Frattin",
     "Nate Thompson",
     "Nick Shore",
-    "Steven Delisle"
+    "Steven Delisle",
+    "Travis Dermott"
   ],
   "Filip Nordberg": [
     "Anders Nilsson",
@@ -15933,7 +16094,10 @@
     "Max McCormick"
   ],
   "Jarkko Ruutu": [
-    "Max McCormick"
+    "Bryan McCabe",
+    "Max McCormick",
+    "Todd Bertuzzi",
+    "Trevor Linden"
   ],
   "Petteri Nokelainen": [
     "Ben Walter",
@@ -16079,8 +16243,12 @@
   ],
   "Travis Dermott": [
     "Ben Scrivens",
+    "Dominic Turgeon",
+    "Gabriel Carlsson",
     "Jonathan Bernier",
     "Jordan Gustafson",
+    "Marian Gaborik",
+    "Martins Dzierkals",
     "Matt Frattin"
   ],
   "Jakub Brabenec": [
@@ -16280,7 +16448,10 @@
     "Ladislav Smid",
     "Luca Sbisa",
     "Nick Ross",
+    "Nicklas Grossmann",
+    "Otto Koivula",
     "Ryan Dingle",
+    "Sam Gagner",
     "Travis Hamonic"
   ],
   "Kevin Klein": [
@@ -16343,7 +16514,12 @@
     "Rene Bourque"
   ],
   "Bryan Allen": [
-    "Rene Bourque"
+    "Alex Auld",
+    "Lukas Krajicek",
+    "Rene Bourque",
+    "Roberto Luongo",
+    "Sergei Shirokov",
+    "Todd Bertuzzi"
   ],
   "Petri Kontiola": [
     "James Wisniewski",
@@ -16724,8 +16900,11 @@
   ],
   "Cory Emmerton": [
     "Chris Summers",
+    "Denis Gauthier",
     "Jordan Bendfeld",
-    "Shawn Matthias"
+    "Kenndal McArdle",
+    "Shawn Matthias",
+    "Steve Downie"
   ],
   "Jordan Bendfeld": [
     "Chris Summers",
@@ -16896,7 +17075,10 @@
   "Nigel Dawes": [
     "Ben Maxwell",
     "Brent Sopel",
-    "Olivier Archambault"
+    "Derek Morris",
+    "Dmitri Kalinin",
+    "Olivier Archambault",
+    "Petr Prucha"
   ],
   "Olivier Archambault": [
     "Ben Maxwell",
@@ -16987,6 +17169,8 @@
     "Paul Carey"
   ],
   "Steve Downie": [
+    "Cory Emmerton",
+    "Kenndal McArdle",
     "Max Talbot"
   ],
   "Aaron Haydon": [
@@ -17356,7 +17540,10 @@
     "Tomas Kaberle"
   ],
   "John-Michael Liles": [
+    "Anthony Camara",
     "Dennis Robertson",
+    "Jack Lafontaine",
+    "Jonathan Dugan",
     "Mike Winther",
     "Tim Gleason"
   ],
@@ -17694,6 +17881,7 @@
     "Todd Fedoruk"
   ],
   "Ben Scrivens": [
+    "Dominic Turgeon",
     "Jonathan Bernier",
     "Matt Frattin",
     "Travis Dermott"
@@ -17703,6 +17891,9 @@
     "Ryan Carter"
   ],
   "Matt Kennedy": [
+    "Erik Cole",
+    "Jesse Blacker",
+    "Patrick O'Sullivan",
     "Ryan Carter",
     "Stefan Chaput"
   ],
@@ -17901,7 +18092,9 @@
     "Anthony Romano",
     "Eric Hjorth",
     "Josh Archibald",
-    "Sean Maguire"
+    "Martins Dzierkals",
+    "Sean Maguire",
+    "Steve Mason"
   ],
   "Dan Spang": [
     "Daymond Langkow",
@@ -18406,8 +18599,10 @@
   "Colin Fraser": [
     "Alexei Zhamnov",
     "Bryan Bickell",
+    "Dmitry Sinitsyn",
     "Jim Vandermeer",
-    "RJ Anderson"
+    "RJ Anderson",
+    "Ryan Smyth"
   ],
   "RJ Anderson": [
     "Alexei Zhamnov",
@@ -18425,7 +18620,9 @@
     "Aleksi Saarela"
   ],
   "Brandon Bochenski": [
-    "Kris Versteeg"
+    "Kris Versteeg",
+    "Nicholas Tremblay",
+    "Shane Hnidy"
   ],
   "Philippe Paradis": [
     "Billy Sweatt",
@@ -18628,6 +18825,7 @@
   ],
   "Joni Pitkanen": [
     "Cameron Abney",
+    "Erik Cole",
     "Geoff Sanderson",
     "Jason Smith",
     "Joffrey Lupul"
@@ -19436,6 +19634,406 @@
     "Peter Regin"
   ],
   "Shane Hnidy": [
-    "Peter Regin"
+    "Brandon Bochenski",
+    "Nicholas Tremblay",
+    "Niko Snellman",
+    "Peter Regin",
+    "Todd Jackson"
+  ],
+  "Todd Jackson": [
+    "Shane Hnidy"
+  ],
+  "Niko Snellman": [
+    "Shane Hnidy"
+  ],
+  "Nicholas Tremblay": [
+    "Brandon Bochenski",
+    "Shane Hnidy"
+  ],
+  "Adam Cracknell": [
+    "Peter Holland",
+    "Steve Oleksy"
+  ],
+  "Steve Oleksy": [
+    "Adam Cracknell"
+  ],
+  "Tommy Grant": [
+    "Brandon Mashinter",
+    "Ivan Nalimov"
+  ],
+  "Brandon Mashinter": [
+    "Ivan Nalimov",
+    "Tommy Grant"
+  ],
+  "Jason Morgan": [
+    "Dan Kesa",
+    "Greg Adams (1963)",
+    "Jeff Mitchell",
+    "Joe Fallon",
+    "Russ Courtnall",
+    "Ville Nieminen"
+  ],
+  "Russ Courtnall": [
+    "Dan Kesa",
+    "Greg Adams (1963)",
+    "Jason Morgan"
+  ],
+  "Greg Adams (1963)": [
+    "Dan Kesa",
+    "Jason Morgan",
+    "Russ Courtnall"
+  ],
+  "Dan Kesa": [
+    "Greg Adams (1963)",
+    "Jason Morgan",
+    "Russ Courtnall"
+  ],
+  "Jeff Mitchell": [
+    "Jason Morgan"
+  ],
+  "Gerald Coleman": [
+    "Colton Gillies",
+    "Luca Cunti",
+    "Shane O'Brien"
+  ],
+  "Colton Gillies": [
+    "Gerald Coleman",
+    "Luca Cunti",
+    "Shane O'Brien"
+  ],
+  "Luca Cunti": [
+    "Colton Gillies",
+    "Gerald Coleman",
+    "Shane O'Brien"
+  ],
+  "Juraj Simek": [
+    "Lukas Krajicek",
+    "Michel Ouellet",
+    "Shane O'Brien"
+  ],
+  "Lukas Krajicek": [
+    "Alex Auld",
+    "Bryan Allen",
+    "Juraj Simek",
+    "Michel Ouellet",
+    "Roberto Luongo",
+    "Sergei Shirokov",
+    "Shane O'Brien",
+    "Todd Bertuzzi"
+  ],
+  "Michel Ouellet": [
+    "Juraj Simek",
+    "Lukas Krajicek",
+    "Shane O'Brien"
+  ],
+  "Ryan Parent": [
+    "Dan Gendur",
+    "Jonas Andersson",
+    "Shane O'Brien"
+  ],
+  "Dan Gendur": [
+    "Jonas Andersson",
+    "Ryan Parent",
+    "Shane O'Brien"
+  ],
+  "Jonas Andersson": [
+    "Dan Gendur",
+    "Ryan Parent",
+    "Shane O'Brien"
+  ],
+  "Niklas Backstrom": [
+    "David Jones",
+    "Matthew Phillips"
+  ],
+  "Matthew Phillips": [
+    "David Jones",
+    "Niklas Backstrom"
+  ],
+  "Markus Phillips": [
+    "Greg Pateryn",
+    "Jordie Benn"
+  ],
+  "Jordie Benn": [
+    "Greg Pateryn",
+    "Markus Phillips"
+  ],
+  "2026 2nd Round (CHI/NYI)": [
+    "Josh Bailey"
+  ],
+  "Brandon Baddock": [
+    "Andrew Hammond"
+  ],
+  "Jay McClement": [
+    "Chris Stewart",
+    "Duncan Siemens",
+    "Erik Johnson",
+    "Kevin Shattenkirk",
+    "Ty Rattie"
+  ],
+  "Ty Rattie": [
+    "Chris Stewart",
+    "Duncan Siemens",
+    "Erik Johnson",
+    "Jay McClement",
+    "Kevin Shattenkirk"
+  ],
+  "Duncan Siemens": [
+    "Chris Stewart",
+    "Erik Johnson",
+    "Jay McClement",
+    "Kevin Shattenkirk",
+    "Ty Rattie"
+  ],
+  "Petr Prucha": [
+    "Derek Morris",
+    "Dmitri Kalinin",
+    "Nigel Dawes"
+  ],
+  "Dmitri Kalinin": [
+    "Derek Morris",
+    "Nigel Dawes",
+    "Petr Prucha"
+  ],
+  "Anthony Camara": [
+    "Derek Morris",
+    "Jack Lafontaine",
+    "John-Michael Liles",
+    "Jonathan Dugan"
+  ],
+  "Jonathan Dugan": [
+    "Anthony Camara",
+    "Jack Lafontaine",
+    "John-Michael Liles"
+  ],
+  "Jack Lafontaine": [
+    "Anthony Camara",
+    "John-Michael Liles",
+    "Jonathan Dugan"
+  ],
+  "Daniel Paille": [
+    "Jamie Langenbrunner",
+    "Jason Arnott",
+    "Joe Nieuwendyk",
+    "Randy McKay"
+  ],
+  "Joe Nieuwendyk": [
+    "Daniel Paille",
+    "Jamie Langenbrunner",
+    "Jason Arnott",
+    "Randy McKay"
+  ],
+  "Randy McKay": [
+    "Daniel Paille",
+    "Jamie Langenbrunner",
+    "Jason Arnott",
+    "Joe Nieuwendyk"
+  ],
+  "Valeri Zelepukin": [
+    "Bill Guerin",
+    "Jason Arnott"
+  ],
+  "Matt Halischuk": [
+    "Jason Arnott",
+    "Magnus Hellberg"
+  ],
+  "Magnus Hellberg": [
+    "Jason Arnott",
+    "Ludovic Waeber",
+    "Matt Halischuk",
+    "Pavel Koltygin"
+  ],
+  "Pavel Koltygin": [
+    "Magnus Hellberg"
+  ],
+  "Ludovic Waeber": [
+    "Magnus Hellberg"
+  ],
+  "Rob Davison": [
+    "Jason Demers"
+  ],
+  "Jesper Eliasson": [
+    "Justin Almeida",
+    "Riley Sheahan",
+    "Scott Wilson"
+  ],
+  "Justin Almeida": [
+    "Jesper Eliasson",
+    "Riley Sheahan",
+    "Scott Wilson"
+  ],
+  "Chris Crane": [
+    "Scott Wilson"
+  ],
+  "Connor Crisp": [
+    "Erik Cole",
+    "Michael Ryder"
+  ],
+  "Michael Ryder": [
+    "Connor Crisp",
+    "Erik Cole"
+  ],
+  "Ville Leino": [
+    "Mattias Backman",
+    "Ole-Kristian Tollefsen"
+  ],
+  "Ole-Kristian Tollefsen": [
+    "Mattias Backman",
+    "Ville Leino"
+  ],
+  "Hayden Verbeek": [
+    "Jack Bar",
+    "Jon Merrill"
+  ],
+  "Teddy Purcell": [
+    "Sam Gagner"
+  ],
+  "Blair Jones": [
+    "Chris Lawrence",
+    "Shawn Matthias"
+  ],
+  "Chris Lawrence": [
+    "Blair Jones",
+    "Shawn Matthias"
+  ],
+  "Kenndal McArdle": [
+    "Angelo Esposito",
+    "Cory Emmerton",
+    "Steve Downie"
+  ],
+  "Trevor Linden": [
+    "Bryan McCabe",
+    "Jarkko Ruutu",
+    "Todd Bertuzzi"
+  ],
+  "Bryan McCabe": [
+    "Jarkko Ruutu",
+    "Todd Bertuzzi",
+    "Trevor Linden"
+  ],
+  "Sergei Shirokov": [
+    "Alex Auld",
+    "Bryan Allen",
+    "Lukas Krajicek",
+    "Mike Duco",
+    "Roberto Luongo",
+    "Todd Bertuzzi"
+  ],
+  "Mike Duco": [
+    "Sergei Shirokov"
+  ],
+  "Nikolas Koberstein": [
+    "Johnathan MacLeod",
+    "Sebastian Collberg",
+    "Thomas Vanek"
+  ],
+  "Sebastian Collberg": [
+    "Johnathan MacLeod",
+    "Nikolas Koberstein",
+    "Thomas Vanek"
+  ],
+  "Andrei Nazarov": [
+    "Bryan Marchment",
+    "David Legwand",
+    "David Shaw",
+    "Vincent Lecavalier"
+  ],
+  "Bryan Marchment": [
+    "Andrei Nazarov",
+    "David Legwand",
+    "David Shaw",
+    "Vincent Lecavalier"
+  ],
+  "David Shaw": [
+    "Andrei Nazarov",
+    "Bernie Nicholls",
+    "Brian Glynn",
+    "Bryan Marchment",
+    "David Legwand",
+    "Jason Doyle (1)",
+    "Jeff Beukeboom",
+    "Jeff Jackson",
+    "John Ogrodnick",
+    "Louie DeBrusk",
+    "Mark Messier",
+    "Steven Rice",
+    "Terry Carkner",
+    "Vincent Lecavalier"
+  ],
+  "Steven Rice": [
+    "Bernie Nicholls",
+    "David Shaw",
+    "Jeff Beukeboom",
+    "Louie DeBrusk",
+    "Mark Messier"
+  ],
+  "Jeff Beukeboom": [
+    "Bernie Nicholls",
+    "David Shaw",
+    "Louie DeBrusk",
+    "Mark Messier",
+    "Steven Rice"
+  ],
+  "Louie DeBrusk": [
+    "Bernie Nicholls",
+    "David Shaw",
+    "Jeff Beukeboom",
+    "Mark Messier",
+    "Steven Rice"
+  ],
+  "Bernie Nicholls": [
+    "David Shaw",
+    "Jeff Beukeboom",
+    "Louie DeBrusk",
+    "Mark Messier",
+    "Steven Rice"
+  ],
+  "Terry Carkner": [
+    "David Shaw",
+    "Jeff Jackson",
+    "John Ogrodnick"
+  ],
+  "Jeff Jackson": [
+    "David Shaw",
+    "John Ogrodnick",
+    "Terry Carkner"
+  ],
+  "John Ogrodnick": [
+    "David Shaw",
+    "Jeff Jackson",
+    "Terry Carkner"
+  ],
+  "Brian Glynn": [
+    "David Shaw"
+  ],
+  "Jason Doyle (1)": [
+    "Ben Hankinson",
+    "David Shaw",
+    "Marc Bergevin",
+    "Shawn Burr"
+  ],
+  "Ben Hankinson": [
+    "Jason Doyle (1)",
+    "Marc Bergevin",
+    "Shawn Burr"
+  ],
+  "Shawn Burr": [
+    "Ben Hankinson",
+    "Jason Doyle (1)",
+    "Marc Bergevin"
+  ],
+  "Mark Janssens": [
+    "Jason Doyle (2)"
+  ],
+  "Jason Doyle (2)": [
+    "Mark Janssens"
+  ],
+  "Dmitry Sinitsyn": [
+    "Colin Fraser",
+    "Dominik Kubalik",
+    "Ryan Smyth"
+  ],
+  "Ryan Smyth": [
+    "Colin Fraser",
+    "Dmitry Sinitsyn"
   ]
 }
