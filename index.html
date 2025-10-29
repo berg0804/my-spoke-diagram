@@ -53,8 +53,8 @@
 
   // Load both JSONs
   Promise.all([
-    fetch('player_graph.json').then(res => res.json()),
-    fetch('node_colors.json').then(res => res.json())
+    fetch('node_colors.json').then(res => res.json()),
+    fetch('player_graph.json').then(res => res.json())
   ])
   .then(([graph, colors]) => {
     graphData = graph;
