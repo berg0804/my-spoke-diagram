@@ -9977,10 +9977,12 @@
     "Tom Pyatt"
   ],
   "Guillaume Latendresse": [
+    "Benoit Pouliot",
     "Brodie Dupont",
     "Marc-Andre Cliche"
   ],
   "Brodie Dupont": [
+    "Andreas Thuresson",
     "Guillaume Latendresse",
     "Marc-Andre Cliche"
   ],
@@ -10003,7 +10005,8 @@
   "David Schlemko": [
     "Byron Froese",
     "Christian Folin",
-    "Dale Weise"
+    "Dale Weise",
+    "Marcus Kalionkiela"
   ],
   "Michael Bunting": [
     "2026 4th Round (PIT/NSH)",
@@ -10037,14 +10040,21 @@
     "Phil Varone"
   ],
   "Phil Varone": [
+    "Alexander Guptil",
+    "Cole Schneider",
+    "Eric O'Dell",
     "Jake Lucchini",
+    "Jason Akeson",
+    "Jerome Leduc",
     "Joseph Blandisi",
+    "Michael Sdao",
     "Riley Barber"
   ],
   "Joseph Blandisi": [
     "Adam Henrique",
     "Blake McLaughlin",
     "Daniil Misyul",
+    "Derek Grant",
     "Jake Lucchini",
     "Phil Varone",
     "Riley Barber",
@@ -10056,7 +10066,9 @@
     "Ryan Poehling"
   ],
   "Jasper Weatherby": [
+    "Al Montoya",
     "Jack Gorniak",
+    "Kyle Criscuolo",
     "Mikael Hakkarainen"
   ],
   "Zachary Bolduc": [
@@ -10077,7 +10089,8 @@
     "Cole Guttman",
     "Dennis Wideman",
     "Jake Hauswirth",
-    "Nikita Nesterov"
+    "Nikita Nesterov",
+    "Tim Bozon"
   ],
   "Oliver Kapanen": [
     "Jack Finley",
@@ -10131,7 +10144,10 @@
     "Tomas Tatar"
   ],
   "Max Pacioretty": [
+    "Craig Rivet",
     "Dylan Coghlan",
+    "Josh Gorges",
+    "Julien Demers",
     "Nick Suzuki",
     "Samuel Fagemo",
     "Tomas Tatar"
@@ -10185,9 +10201,12 @@
     "Timo Pielmeier"
   ],
   "Mark Fraser": [
+    "Cameron Abney",
+    "Dale Mitchell",
     "Jaycob Megna",
     "Kurtis Foster",
     "Rod Pelley",
+    "Teemu Hartikainen",
     "Timo Pielmeier"
   ],
   "Herman Traff": [
@@ -10213,12 +10232,14 @@
   ],
   "Patrice Cormier": [
     "Anssi Salmela",
+    "Anton Gustafsson",
     "Ilya Kovalchuk",
     "Johnny Oduya",
     "Jon Merrill",
     "Justin Holl",
     "Kevin Hayes",
-    "Niclas Bergfors"
+    "Niclas Bergfors",
+    "Tyler Cuma"
   ],
   "Ilya Kovalchuk": [
     "Anssi Salmela",
@@ -10234,12 +10255,14 @@
     "Adam Mascherin (2)",
     "Anssi Salmela",
     "Ilya Kovalchuk",
+    "JC Lipon",
     "Jon Merrill",
     "Justin Holl",
     "Kevin Hayes",
     "Mark McNeill",
     "Niclas Bergfors",
-    "Patrice Cormier"
+    "Patrice Cormier",
+    "Zachary Sanford"
   ],
   "Anssi Salmela": [
     "Ilya Kovalchuk",
@@ -10247,7 +10270,9 @@
     "Jon Merrill",
     "Justin Holl",
     "Kevin Hayes",
+    "Myles Stoesz",
     "Niclas Bergfors",
+    "Niclas Havelid",
     "Patrice Cormier"
   ],
   "Pavel Zacha": [
@@ -10291,8 +10316,14 @@
     "Joe Sova"
   ],
   "Alexei Ponikarovsky": [
+    "Brenden Kitchon",
+    "Dino Ciccarelli",
     "Jaccob Slavin",
-    "Joe Sova"
+    "Jamie Macoun",
+    "Joe Sova",
+    "Luca Caputi",
+    "Martin Skoula",
+    "Nelson Nogier"
   ],
   "Joe Sova": [
     "Alexei Ponikarovsky",
@@ -13785,6 +13816,8 @@
   "Zachary Sanford": [
     "Brad Malone",
     "Cameron O'Neill",
+    "JC Lipon",
+    "Johnny Oduya",
     "Kevin Shattenkirk",
     "Logan Brown",
     "Morgan Frost",
@@ -16636,7 +16669,10 @@
     "Chad Krys"
   ],
   "Josh Gorges": [
-    "Chad Krys"
+    "Chad Krys",
+    "Craig Rivet",
+    "Julien Demers",
+    "Max Pacioretty"
   ],
   "Patrick Holland": [
     "Eric Tangradi",
@@ -16796,6 +16832,12 @@
     "Joffrey Lupul"
   ],
   "Eric O'Dell": [
+    "Alexander Guptil",
+    "Cole Schneider",
+    "Jason Akeson",
+    "Jerome Leduc",
+    "Michael Sdao",
+    "Phil Varone",
     "Viktor Tikhonov"
   ],
   "Jim Dowd": [
@@ -18423,7 +18465,9 @@
     "Kerby Rychel"
   ],
   "Niclas Havelid": [
-    "Kurtis Foster"
+    "Anssi Salmela",
+    "Kurtis Foster",
+    "Myles Stoesz"
   ],
   "Andy Sutton": [
     "Kurtis Foster"
@@ -18608,6 +18652,7 @@
   "Al Montoya": [
     "David LeNeveu",
     "Fredrik Sjostrom",
+    "Jasper Weatherby",
     "Josh Gratton",
     "Marcel Hossa",
     "Roman Horak"
@@ -19046,7 +19091,9 @@
     "Geoff Sanderson",
     "Jason Smith",
     "Joffrey Lupul",
-    "Joni Pitkanen"
+    "Joni Pitkanen",
+    "Mark Fraser",
+    "Teemu Hartikainen"
   ],
   "Joni Pitkanen": [
     "Cameron Abney",
@@ -20640,7 +20687,13 @@
   ],
   "Alexander Guptil": [
     "Alex Therieau",
-    "Michael Bournival"
+    "Cole Schneider",
+    "Eric O'Dell",
+    "Jason Akeson",
+    "Jerome Leduc",
+    "Michael Bournival",
+    "Michael Sdao",
+    "Phil Varone"
   ],
   "Justin Shugg": [
     "Aaron Ward",
@@ -20736,9 +20789,11 @@
     "Pontus Aberg"
   ],
   "Myles Stoesz": [
+    "Anssi Salmela",
     "Chad Denny",
     "Devin Setoguchi",
-    "Marc Staal"
+    "Marc Staal",
+    "Niclas Havelid"
   ],
   "Chad Denny": [
     "Devin Setoguchi",
@@ -20769,5 +20824,106 @@
   ],
   "Macmillan Carruth": [
     "Doug Janik"
+  ],
+  "Benoit Pouliot": [
+    "Guillaume Latendresse"
+  ],
+  "Andreas Thuresson": [
+    "Brodie Dupont"
+  ],
+  "Marcus Kalionkiela": [
+    "David Schlemko"
+  ],
+  "Jason Akeson": [
+    "Alexander Guptil",
+    "Cole Schneider",
+    "Eric O'Dell",
+    "Jerome Leduc",
+    "Michael Sdao",
+    "Phil Varone"
+  ],
+  "Cole Schneider": [
+    "Alexander Guptil",
+    "Eric O'Dell",
+    "Jason Akeson",
+    "Jerome Leduc",
+    "Michael Sdao",
+    "Phil Varone"
+  ],
+  "Jerome Leduc": [
+    "Alexander Guptil",
+    "Cole Schneider",
+    "Eric O'Dell",
+    "Jason Akeson",
+    "Michael Sdao",
+    "Phil Varone"
+  ],
+  "Michael Sdao": [
+    "Alexander Guptil",
+    "Cole Schneider",
+    "Eric O'Dell",
+    "Jason Akeson",
+    "Jerome Leduc",
+    "Phil Varone"
+  ],
+  "Derek Grant": [
+    "Joseph Blandisi"
+  ],
+  "Kyle Criscuolo": [
+    "Jasper Weatherby"
+  ],
+  "Tim Bozon": [
+    "Jonathan Racine"
+  ],
+  "Julien Demers": [
+    "Craig Rivet",
+    "Josh Gorges",
+    "Max Pacioretty"
+  ],
+  "Craig Rivet": [
+    "Josh Gorges",
+    "Julien Demers",
+    "Max Pacioretty"
+  ],
+  "Dale Mitchell": [
+    "Mark Fraser"
+  ],
+  "Teemu Hartikainen": [
+    "Cameron Abney",
+    "Mark Fraser"
+  ],
+  "Tyler Cuma": [
+    "Anton Gustafsson",
+    "Patrice Cormier"
+  ],
+  "Anton Gustafsson": [
+    "Patrice Cormier",
+    "Tyler Cuma"
+  ],
+  "JC Lipon": [
+    "Johnny Oduya",
+    "Zachary Sanford"
+  ],
+  "Dino Ciccarelli": [
+    "Alexei Ponikarovsky"
+  ],
+  "Jamie Macoun": [
+    "Alexei Ponikarovsky"
+  ],
+  "Martin Skoula": [
+    "Alexei Ponikarovsky",
+    "Luca Caputi"
+  ],
+  "Luca Caputi": [
+    "Alexei Ponikarovsky",
+    "Martin Skoula"
+  ],
+  "Nelson Nogier": [
+    "Alexei Ponikarovsky",
+    "Brenden Kitchon"
+  ],
+  "Brenden Kitchon": [
+    "Alexei Ponikarovsky",
+    "Nelson Nogier"
   ]
 }
